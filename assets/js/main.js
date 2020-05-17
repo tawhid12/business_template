@@ -17,5 +17,16 @@ $(document).ready(function($){
     // Owl Next Privew Change
     //$( ".owl-prev").html('<i class="fa screenshort-arow fa-chevron-left"></i>');
     //$( ".owl-next").html('<i class="fa screenshort-arow fa-chevron-right"></i>');
+	  /* ---------------------------------------------
+                     Menu Toggle 
+   ------------------------------------------------ */
+
+   if ($(window).width() < 991) {
+      $(".navbar-nav li a").on("click", function () {
+         $(this).parent("li").find(".dropdown-menu").slideToggle();
+         $(this).find("i").toggleClass("fa-angle-up fa-angle-down");
+      });
+
+   }
 
 }(jQuery));
